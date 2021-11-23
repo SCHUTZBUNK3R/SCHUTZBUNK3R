@@ -1,0 +1,214 @@
+#content{
+	margin-top:100px;
+}
+ul.sdt_menu{
+	margin-right: 23%;
+	margin-left: 23.4375%;
+	margin-top: 50px;
+	padding:0;
+	list-style: none;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+	font-size:14px;
+	width:1020px;
+}
+ul.sdt_menu a{
+	text-decoration:none;
+	outline:none;
+}
+ul.sdt_menu li{
+	float:left;
+	width:170px;
+	height:85px;
+	position:relative;
+	cursor:pointer;
+}
+ul.sdt_menu li > a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:170px;
+	height:85px;
+	z-index:12;
+	background:transparent url(../images/overlay.png) no-repeat bottom right;
+	-moz-box-shadow:0px 0px 2px #000 inset;
+	-webkit-box-shadow:0px 0px 2px #000 inset;
+	box-shadow:0px 0px 2px #000 inset;
+}
+ul.sdt_menu li a img{
+	border:none;
+	position:absolute;
+	width:0px;
+	height:0px;
+	bottom:0px;
+	left:85px;
+	z-index:100;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:0px 0px 4px #000;
+}
+ul.sdt_menu li span.sdt_wrap{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:170px;
+	height:60px;
+	z-index:15;
+}
+ul.sdt_menu li span.sdt_active{
+	position:absolute;
+	background:#111;
+	top:85px;
+	width:170px;
+	height:0px;
+	left:0px;
+	z-index:14;
+	-moz-box-shadow:0px 0px 4px #000 inset;
+	-webkit-box-shadow:0px 0px 4px #000 inset;
+	box-shadow:0px 0px 4px #000 inset;
+}
+ul.sdt_menu li span span.sdt_link,
+ul.sdt_menu li span span.sdt_descr,
+ul.sdt_menu li div.sdt_box a{
+	margin-left:15px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #000;
+}
+ul.sdt_menu li span span.sdt_link{
+	color:#fff;
+	font-size:24px;
+	float:left;
+	clear:both;
+}
+ul.sdt_menu li span span.sdt_descr{
+	color:#0B75AF;
+	float:left;
+	clear:both;
+	width:155px;
+	font-size:10px;
+	letter-spacing:1px;
+}
+ul.sdt_menu li div.sdt_box{
+	display:block;
+	position:absolute;
+	width:170px;
+	overflow:hidden;
+	height:170px;
+	top:85px;
+	left:0px;
+	display:none;
+	background:#000;
+}
+ul.sdt_menu li div.sdt_box a{
+	float:left;
+	clear:both;
+	line-height:90px;
+	color:#0B75AF;
+    font-size: 110%;
+}
+ul.sdt_menu li div.sdt_box a:first-child{
+	margin-top:15px;
+}
+ul.sdt_menu li div.sdt_box a:hover{
+	color:#fff;
+}
+img{
+	width: 252px;
+	height: 252px;
+}
+#menu {
+	background: #545454;
+	background: linear-gradient(to bottom,  #CCCCCC,  #000000);
+	color: #FFF;
+	height: 45px;
+	padding-left: 18px;
+	border-radius: 50px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: left;
+	display: inline;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\23F7";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #FFFCFD;
+	background: #F2F2F2;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 45px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 15px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #F2F2F2;
+	color: #444444;
+}
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+#products{
+	float:left;
+}

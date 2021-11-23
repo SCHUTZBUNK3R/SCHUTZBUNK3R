@@ -1,0 +1,42 @@
+h1{
+   text-align: center;
+   align-items: center;
+   color: white;
+   background:transparent url(../images/overlay.png) bottom right;
+   margin-left: 12%;
+   margin-right: 12%;
+   font-size: 500%;
+   width: 40%;
+   -moz-box-shadow:0px 0px 2px #000 inset;
+   -webkit-box-shadow:0px 0px 2px #000 inset;
+   box-shadow:0px 0px 2px #000 inset;
+}
+
+.about{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 2%;
+    font-size: 200%;
+	background-color: grey;
+    -moz-box-shadow:0px 0px 2px #000 inset;
+	-webkit-box-shadow:0px 0px 2px #000 inset;
+	box-shadow:0px 0px 2px #000 inset;
+}
+.animated-text {
+ font-family: monospace;
+ overflow: hidden;
+ height:1.1em;
+ word-wrap: break-word;
+ white-space: nowrap;
+ animation: typing 3s steps(12) forwards;
+}
+
+@keyframes typing {
+  from { 
+    width: 0;
+  }
+
+  to { 
+    width: 12ch;
+  }
+}
